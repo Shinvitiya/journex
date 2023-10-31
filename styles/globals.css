@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("../fonts/aileron.css");
+@import url("../fonts/grotesque.css");
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax_image_top{
+    background-image: url("../public/parallax-top.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.parallax_image_bottom{
+    background-image: url("../public/parallax-bottom.webp");
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.text_gradient{
+    background: linear-gradient(90deg, #4AC7FA 0%, #E649F5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background_gradient{
+    background: linear-gradient(90deg, #4AC7FA 0%, #E649F5 100%);
+}
+
+.mask{
+    mask-image: url("../public/mask.svg");
+    background: linear-gradient(90deg, #4AC7FA 0%, #E649F5 100%);
+    mask-repeat: no-repeat;
+    mask-size: 40px ;
+    color: black;
+    cursor: pointer;
+
+}
+
+.footer_pattern{
+    background-image: url("../public/pattern.png");
+    background-position: bottom;
+    background-repeat: repeat;
+    inset: 0;
+}
+
