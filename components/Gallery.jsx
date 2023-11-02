@@ -1,14 +1,11 @@
 "use client"
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
-import { galleries, smoothScroll } from '@/utils/utilities';
+import { galleries } from '@/utils/utilities';
 
 const Gallery = () => {
-  useEffect( ()=>{
-    smoothScroll()
-  }, [])
   const ref = useRef(null)
   const {scrollYProgress} = useScroll({
     target: ref,

@@ -1,15 +1,19 @@
 "use client";
 import React, {useRef, useEffect} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { smoothScroll } from '@/utils/utilities';
+import Lenis from '@studio-freight/lenis';
 
 
 const About = () => {
+  useEffect( () => {
+    const lenis = new Lenis()
+    const raf = (time) => {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
   const ref = useRef(null);
-
-  useEffect( () =>{
-    smoothScroll()
-});
 
   const {scrollYProgress} = useScroll({
     target: ref,

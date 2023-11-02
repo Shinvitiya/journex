@@ -78,9 +78,9 @@ const Navbar = () => {
             animate="animate"
             custom={index}
             exit={{x:-100, opacity:[0.8,0.5, 0], scale: [0.8,0.5, 0]}}
-            className='z-30 flex justify-center px-2 py-1 rounded-lg bg-[#54BFFA]'
+            className='z-30 flex justify-center px-2 py-1 rounded-lg bg-[#15171B]'
             >
-                <Link href={item.link} className=' text-white font-semibold'>
+                <Link href={item.link} className=' text-white font-semibold px-4 py-1' onClick={() => setClick(!click)}>
                     {item.name}
                 </Link>
             </motion.div>

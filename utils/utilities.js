@@ -27,11 +27,7 @@ export const navbarItems = [
     },
     {
         name: "About",
-        link: "/",
-    },
-    {
-        name: "Services",
-        link: "/"
+        link: "/about",
     }
 ];
 
@@ -51,16 +47,7 @@ export const navbarAnimations = {
     }),
 };
 
-export const smoothScroll = () =>{
-    const lenis = new Lenis({
-        duration: 3,
-    })
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-}
-    requestAnimationFrame(raf)
-};
+
 
 export const gallery =  [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
 
