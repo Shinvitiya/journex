@@ -23,22 +23,27 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     
     <>
     <html lang="en">
       <head>
       <Script 
-        src={`https://www.googletagmanager.com/gtag/js?id=G-8DPY6SRFQ5`}
+        strategy='afterInteractive'
+        src="https://www.googletagmanager.com/gtag/js?id=G-8DPY6SRFQ5"
       />
-      <Script strategy='lazyOnload'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-8DPY6SRFQ5');
-        `}
 
+      <Script
+        strategy='afterInteractive'
+        id='google-analytics'
+      >
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8DPY6SRFQ5');
+        `}
       </Script>
       <meta name="google-site-verification" content="yCsHCcBoaV6v5y1H0vTzk5Vv08kAk_gXdq5Sy_bL3XU" />
       </head>
